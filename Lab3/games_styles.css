@@ -1,0 +1,71 @@
+﻿body {
+    color: antiquewhite;
+    background-image: url('images/background3.jpg');
+    font-family: 'Dancing Script', cursive;
+}
+
+input, select, textarea {
+    margin: auto;
+}
+
+.main-label {
+    display: inline-block;
+    width: 300px;
+    padding-top: 15px;
+}
+
+.inputs-align {
+    display: inline-block;
+}
+
+input {
+    background-color: pink;
+}
+
+h1 {
+    text-align: center;
+}
+
+#getDiv {
+    margin: auto;
+    text-align: center;
+}
+
+#form {
+    display: none;
+}
+
+#main {
+}
+
+#gameSection img {
+    display: block;
+    margin: auto;
+}
+
+#displayArea {
+    margin-left: 420px;
+    border: 10px solid white;
+    padding: 60px;
+    width: 350px;
+    color: white;
+    text-align: center;
+    display: inline-block;
+    visibility: hidden;
+}
+
+
+#gameSection {
+    margin: auto;
+    margin-top: 450px;
+    border: 5px solid white;
+    width: 500px;
+    bottom: 2em;
+    right: 0;
+    left: 1em;
+    color: white;
+    text-align: center;
+    display: inline-table;
+    position: fixed;
+    visibility: hidden;
+}

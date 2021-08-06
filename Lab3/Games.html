@@ -1,0 +1,147 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Game Store</title>
+    <link href="games_styles.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
+
+    <script src="gamesjs.js"></script>
+</head>
+<body>
+
+    <h1>House of Games </h1>
+    <h1><a href="../index.html">Home</a></h1>
+
+
+    <div id="getDiv">
+        <h2>Pick a Console</h2>
+        <select id="pickConsole">
+            <option value="All">All</option>
+            <option value="PS4">PS4</option>
+            <option value="Xbox">Xbox</option>
+            <option value="PC"> PC </option>
+            <option value="Nintendo Switch">Nintendo Switch</option>
+        </select>
+    </div>
+
+    <div id="getDiv">
+        <h2>Pick a Genre</h2>
+        <select id="pickGenre">
+            <option value="All">All</option>
+            <option value="Action-Adventure">Action-Adventure</option>
+            <option value="Sports">Sports</option>
+            <option value="Platformer">Platformer</option>
+            <option value="RPG">RPG</option>
+            <option value="Simulation">Simulation</option>
+        </select>
+    </div>
+
+    <div id="getDiv">
+        <h2>Pick your Price Range</h2>
+        <select id="gamePrice">
+            <option value="All">All</option>
+            <option value="59.99,99.99">$59.99 - $99.99</option>
+            <option value="39.99,49.99">$39.99 - $49.99</option>
+            <option value="19.99,29.99">$19.99 - $29.99</option>
+            <option value="9.99,19.99">$9.99 - $19.99</option>
+            <option value="0.00,9.99">$0.00 - $9.99</option>
+        </select>
+    </div>
+    <br />
+    <div id="getDiv">
+        <input type="checkbox" name="chkbox" id="hide" onclick="showHide()" />
+        <label for="hide">Click to show the Form</label>
+        <br />
+        <form action="#" id="form">
+
+
+
+            <label class="main-label"> Enter the Name of the Game: </label> <input type="text" id="gamename" name="Name" class="hidden" required /> <span class="validationspan" id="gamenamespan"></span>
+            <br />
+            <label class="main-label">Enter the Name of the Developer:</label> <input type="text" id="devname" name="Name" class="hidden" required /> <span class="validationspan" id="devnamespan"></span>
+            <br />
+            <label class="main-label"> Enter the Release Date: </label> <input type="text" id="reldate" name="Name" class="hidden" required /><span class="validationspan" id="reldatespan"></span>
+            <br />
+            <label class="main-label" required> Enter a Small Description of the game: </label>
+            <textarea input id="desc" class="hidden" required></textarea> <span class="validationspan" id="descspan"></span>
+            <br />
+            <label class="main-label" required> Enter the Price: </label> <input type="text" id="price" name="Name" class="hidden" /><span class="validationspan" id="pricespan"></span>
+            <br />
+            <label input id="rating" class="main-label"> Rating: </label> <span class="validationspan" id="ratingspan"></span>
+            <div class="inputs-align">
+                <input class="hidden" type="radio" id="1" name="rate" value="1/5" required>
+                <label class="hidden" for="1">1/5 </label>
+                <input class="hidden" type="radio" id="2" name="rate" value="2/5">
+                <label class="hidden" for="2">2/5 </label>
+                <input class="hidden" type="radio" id="3" name="rate" value="3/5">
+                <label class="hidden" for="3">3/5</label>
+                <input class="hidden" type="radio" id="4" name="rate" value="4/5">
+                <label class="hidden" for="4">4/5</label>
+                <input class="hidden" type="radio" id="5" name="rate" value="5/5">
+                <label class="hidden" for="5">5/5</label>
+            </div>
+            <br />
+
+            <!---  <label id="genre" class="main-label" for="genre" required>Select the Genre</label>  <span class="validationspan" id="genrespan"></span>
+        <select class="hidden" id="genre" name="genre">
+            <option class="hidden" value="pickGenre">Pick Genre</option>
+            <option class="hidden" value="Action-Adventure">Action-Adventure</option>
+            <option class="hidden" value="Sports">Sports</option>
+            <option class="hidden" value="Platformer">Platformer</option>
+            <option class="hidden" value="RPG">RPG</option>
+            <option class="hidden" value="Simulation">Simulation</option>
+
+        </select>
+        <br />-->
+
+
+            <br />
+
+            <label input id="genre" class="main-label" required> Choose the Platform: </label>   <span class="validationspan" id="genrespan"></span>
+            <input class="hidden" type="radio" id="Action-Adventure" name="genre" value="Action-Adventure">
+            <label class="hidden" for="Action-Adventure">Action-Adventure </label>
+            <input class="hidden" type="radio" id="Sports" name="genre" value="Sports">
+            <label class="hidden" for="Sports">Sports </label>
+            <input class="hidden" type="radio" id="Platformer" name="genre" value="Platformer">
+            <label class="hidden" for="Platformer">Platformer</label>
+            <input class="hidden" type="radio" id="RPG" name="genre" value="RPG">
+            <label class="hidden" for="RPG">RPG</label>
+            <input class="hidden" type="radio" id="Simulation" name="genre" value="Simulation">
+            <label class="hidden" for="Simulation">Simulation</label>
+
+
+
+
+
+
+
+            <br />
+            <label input id="platformname" class="main-label" required> Choose the Platform: </label>   <span class="validationspan" id="platformspan"></span>
+            <input class="hidden" type="radio" id="PS4" name="game" value="PS4">
+            <label class="hidden" for="PS4">PS4 </label>
+            <input class="hidden" type="radio" id="Xbox" name="game" value="Xbox">
+            <label class="hidden" for="Xbox">Xbox </label>
+            <input class="hidden" type="radio" id="PC" name="game" value="PC">
+            <label class="hidden" for="PC">PC</label>
+            <input class="hidden" type="radio" id="Nintendo Switch" name="game" value="Nintendo Switch">
+            <label class="hidden" for="Nintendo Switch">Nintendo Switch</label>
+            <br />
+            <label class="main-label" required>Paste the URL of your Image:</label> <input type="text" id="pict" name="image" class="hidden" />  <span class="validationspan" id="pictspan"></span>
+            <br />
+            <input class="hidden" type="button" onClick="return validateForm()" value="Submit Response" required />
+
+        </form>
+        </div>
+        <div id="displayArea">
+
+        </div>
+        <div id="gameSection">
+
+        </div>
+
+
+
+    </body>
+    </html>
+
